@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #0c0c0c;
+  color: white;
+  line-height: 1.5;
+}
+
+/* HEADER */
+
+header {
+  padding: 20px;
+  background: black;
+  border-bottom: 4px solid red;
+  text-align: center;
+}
+
+/* BANNER */
+
+.banner {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.banner h2 {
+  color: red;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* GRID MOBILE (PADRÃO) */
+
+.grid-evento {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARDS */
+
+.evento,
+.programacao,
+.galeria,
+.local {
+  background: #151515;
+  padding: 20px;
+  border-left: 5px solid red;
+  border-radius: 10px;
+}
+
+/* PROGRAMAÇÃO */
+
+.card {
+  background: #1f1f1f;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* GALERIA */
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.galeria h2 {
+  grid-column: 1 / -1;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* LOCAL */
+
+.local img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  border-top: 4px solid red;
+}
+
+/* ========================= */
+/* TABLET (768px+) */
+/* ========================= */
+
+@media (min-width: 768px) {
+
+  .banner h2 {
+    font-size: 36px;
+  }
+
+  .grid-evento {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========================= */
+/* DESKTOP (1024px+) */
+/* ========================= */
+
+@media (min-width: 1024px) {
+
+  .banner h2 {
+    font-size: 48px;
+  }
+
+  .grid-evento {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
