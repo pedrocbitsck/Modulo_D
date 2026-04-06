@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-yellow-400 text-black px-6 py-2 rounded-xl hover:bg-yellow-500 transition;
+  }
+
+  .card-pizza {
+    @apply bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition;
+  }
+
+  .titulo {
+    @apply text-3xl font-bold mb-4;
+  }
+}
+
+@layer utilities {
+  .bg-pizza {
+    background-image: url('https://images.unsplash.com/photo-1601924582975-7b8c2d4e6b93');
+    background-size: cover;
+    background-position: center;
+  }
+}

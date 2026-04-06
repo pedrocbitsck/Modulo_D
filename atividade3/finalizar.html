@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Pedido</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-yellow-50 min-h-screen flex items-center justify-center p-4">
+
+  <div class="bg-white w-full max-w-2xl rounded-2xl shadow-lg p-6">
+    
+    <h1 class="text-3xl font-bold text-center text-red-600 mb-6">
+      Finalizar Pedido 🍕
+    </h1>
+
+    <div class="mb-6">
+      <h2 class="text-xl font-semibold mb-3">Seu Pedido</h2>
+
+      <div class="bg-gray-100 p-4 rounded-lg space-y-2">
+        <p>🍕 Pizza Gaguinho - R$ 35,00</p>
+        <p>🍕 Pizza Frango com Catupiry - R$ 38,00</p>
+      </div>
+
+      <div class="flex justify-between mt-4 font-bold text-lg">
+        <span>Total:</span>
+        <span class="text-green-600">R$ 73,00</span>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-xl font-semibold">Dados para Entrega</h2>
+
+      <input type="text" placeholder="Nome"
+        class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+
+      <input type="text" placeholder="Endereço"
+        class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+
+      <input type="text" placeholder="Telefone"
+        class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+    </div>
+
+    <div class="mt-6">
+      <h2 class="text-xl font-semibold mb-3">Pagamento</h2>
+
+      <select class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+        <option>Cartão</option>
+        <option>Pix</option>
+        <option>Dinheiro</option>
+      </select>
+    </div>
+
+    <div class="flex justify-between mt-8">
+      <a href="cardapio.html"
+        class="bg-gray-400 hover:bg-gray-500 text-white px-6 py-3 rounded-lg">
+        Voltar
+      </a>
+
+      <button
+        class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-bold">
+        Confirmar Pedido ✅
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>
