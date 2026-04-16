@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Central de Ajuda</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+  </head>
+
+  <body
+    class="bg-gradient-to-br from-yellow-50 to-orange-100 dark:from-gray-900 dark:to-black min-h-screen p-10 text-gray-800 dark:text-white"
+  >
+    <div class="flex justify-between mb-10">
+      <h1 class="text-4xl font-bold text-red-600">Central de Ajuda</h1>
+      <button
+        onclick="toggleDark()"
+        class="bg-black text-white px-3 py-1 rounded"
+      >
+        🌙
+      </button>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-5">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+        <h2 class="font-bold">Como fazer um pedido?</h2>
+        <p>Acesse o cardápio e finalize.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+        <h2 class="font-bold">Tempo de entrega</h2>
+        <p>30 a 50 minutos.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+        <h2 class="font-bold">Pagamento</h2>
+        <p>PIX, cartão e dinheiro.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+        <h2 class="font-bold">Contato</h2>
+        <p>(51) 99789-2387</p>
+      </div>
+    </div>
+
+    <script>
+      function toggleDark() {
+        document.documentElement.classList.toggle("dark");
+
+        if (document.documentElement.classList.contains("dark")) {
+          localStorage.setItem("tema", "dark");
+        } else {
+          localStorage.setItem("tema", "light");
+        }
+      }
+
+      if (localStorage.getItem("tema") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </body>
+</html>

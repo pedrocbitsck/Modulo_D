@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre - Bella Massa</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+  </head>
+
+  <body class="bg-yellow-50 text-gray-800 dark:bg-gray-900 dark:text-white">
+    <header
+      class="bg-red-600 text-white p-5 shadow-md flex justify-between items-center"
+    >
+      <h1 class="text-3xl font-bold text-center">Bella Massa</h1>
+
+      <button onclick="toggleDark()" class="bg-black px-3 py-1 rounded">
+        🌙
+      </button>
+    </header>
+
+    <section class="max-w-5xl mx-auto p-6">
+      <h2 class="text-3xl font-bold text-center text-red-600 mb-6">
+        Sobre Nós
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="mb-4 text-lg">
+            A <strong>Bella Massa</strong> nasceu da paixão por pizzas
+            artesanais, trazendo o verdadeiro sabor italiano para a sua mesa.
+          </p>
+
+          <p class="mb-4">
+            Utilizamos ingredientes frescos, massas preparadas diariamente e
+            receitas exclusivas que garantem qualidade e sabor incomparáveis.
+          </p>
+
+          <p class="mb-4">
+            Nosso compromisso é oferecer uma experiência única, com atendimento
+            rápido, ambiente acolhedor e pizzas feitas com muito carinho.
+          </p>
+
+          <p class="font-semibold text-red-600">
+            🍕 Mais que uma pizzaria, uma experiência!
+          </p>
+        </div>
+
+        <div>
+          <img src="pizza.jpg" alt="Pizza" class="rounded-2xl shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-800 py-10">
+      <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-yellow-100 dark:bg-gray-700 p-5 rounded-xl shadow">
+          <h3 class="text-xl font-bold text-red-600 mb-2">Missão</h3>
+          <p>
+            Levar sabor e qualidade em cada pizza, proporcionando momentos
+            especiais.
+          </p>
+        </div>
+
+        <div class="bg-yellow-100 dark:bg-gray-700 p-5 rounded-xl shadow">
+          <h3 class="text-xl font-bold text-red-600 mb-2">Visão</h3>
+          <p>Ser referência em pizzarias artesanais na região.</p>
+        </div>
+
+        <div class="bg-yellow-100 dark:bg-gray-700 p-5 rounded-xl shadow">
+          <h3 class="text-xl font-bold text-red-600 mb-2">Valores</h3>
+          <p>Qualidade, respeito ao cliente e paixão pela cozinha.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-red-600 text-white text-center p-4 mt-8 dark:bg-black">
+      <p>© 2026 Bella Massa - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+      function toggleDark() {
+        document.documentElement.classList.toggle("dark");
+
+        if (document.documentElement.classList.contains("dark")) {
+          localStorage.setItem("tema", "dark");
+        } else {
+          localStorage.setItem("tema", "light");
+        }
+      }
+
+      if (localStorage.getItem("tema") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </body>
+</html>

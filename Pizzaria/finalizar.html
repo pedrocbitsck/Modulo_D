@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Finalizar Pedido</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-yellow-50 p-6">
+    <div class="text-right mb-4">
+      <button
+        onclick="toggleDarkMode()"
+        class="bg-gray-800 text-white px-4 py-2 rounded"
+      >
+        🌙
+      </button>
+    </div>
+
+    <h1 class="text-3xl font-bold mb-4">Finalizar Pedido</h1>
+
+    <div id="lista-pedido" class="mb-4"></div>
+
+    <form
+      onsubmit="finalizarPedido(event)"
+      class="bg-white p-4 rounded shadow space-y-3"
+    >
+      <input
+        type="text"
+        id="nome"
+        placeholder="Seu nome"
+        required
+        class="w-full p-2 border rounded"
+      />
+      <input
+        type="text"
+        id="rua"
+        placeholder="Rua"
+        required
+        class="w-full p-2 border rounded"
+      />
+      <input
+        type="number"
+        id="numero"
+        placeholder="Número"
+        required
+        class="w-full p-2 border rounded"
+      />
+      <input
+        type="tel"
+        id="telefone"
+        placeholder="Telefone"
+        required
+        class="w-full p-2 border rounded"
+      />
+
+      <button
+        onclick="finalizarPedido()"
+        class="bg-green-500 text-white px-4 py-2 rounded"
+      >
+        Finalizar Pedido
+      </button>
+
+      <script>
+        function finalizarPedido() {
+          // aqui você pode validar os dados antes, se quiser
+
+          window.location.href = "obrigado.html";
+        }
+      </script>
+    </form>
+
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+          localStorage.setItem("darkMode", "on");
+        } else {
+          localStorage.setItem("darkMode", "off");
+        }
+      }
+
+      if (localStorage.getItem("darkMode") === "on") {
+        document.body.classList.add("dark");
+      }
+    </script>
+
+    <style>
+      .dark {
+        background-color: #111 !important;
+        color: white;
+      }
+
+      .dark .bg-white {
+        background-color: #1f1f1f !important;
+      }
+
+      .dark input {
+        background-color: #2a2a2a !important;
+        color: white;
+        border-color: #444;
+      }
+    </style>
+  </body>
+</html>
